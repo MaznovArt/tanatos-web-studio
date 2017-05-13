@@ -1,16 +1,32 @@
 $(document).ready(function(){
-	  		
+	 
+	 //fixed scroll header 
+	 $(window).scroll(function(){
+	 	if ($(window).scrollTop() > 20) {
+	 		$('.page-header').addClass('page-header-scroll');
+	 	} else {
+	 		$('.page-header').removeClass('page-header-scroll');	
+	 	}
+	 });
+
 	// toggle menu button
 	$(window).resize(function() {
 		if ($('body, html').width() > 750 ) {
 			$('.nav-list').removeAttr('style')
 		}
 	});
-	$('.nav-btn').click(function() {
-		$('.nav-list').slideToggle();
+	$('.nav-btn, .nav-home, .nav-services, .nav-works, .nav-team, .nav-contact').click(function() {
+		$('.mobile-nav-list').slideToggle();
 	});
-	$('.nav-btn').click(function() {
+	$('.nav-btn, .nav-home, .nav-services, .nav-works, .nav-team, .nav-contact').click(function() {
 		$('.nav-btn').toggleClass('nav-close');
+	});
+	$(window).resize(function() {
+		if ($('body, html').width() < 768 ) {
+			$('.nav-list').addClass('mobile-nav-list')
+		} else {
+	 		$('.nav-list').removeClass('mobile-nav-list');	
+	 	}
 	});
 
 	// popup hire us
