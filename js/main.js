@@ -15,10 +15,10 @@ $(document).ready(function(){
 			$('.nav-list').removeAttr('style')
 		}
 	});
-	$('.nav-btn, .nav-home, .nav-services, .nav-works, .nav-team, .nav-contact').click(function() {
+	$('.close-mobile-nav').click(function() {
 		$('.mobile-nav-list').slideToggle();
 	});
-	$('.nav-btn, .nav-home, .nav-services, .nav-works, .nav-team, .nav-contact').click(function() {
+	$('.close-mobile-nav').click(function() {
 		$('.nav-btn').toggleClass('nav-close');
 	});
 	$(window).resize(function() {
